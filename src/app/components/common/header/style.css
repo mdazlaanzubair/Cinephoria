@@ -1,0 +1,4 @@
+.navbar-brand > img:hover {
+    transform: rotate(-2deg);
+    transition: all .2s ease-in-out;
+}

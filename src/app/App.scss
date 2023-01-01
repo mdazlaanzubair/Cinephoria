@@ -1,0 +1,20 @@
+// custom color scheme for the application
+$theme-colors: (
+    primary: #6805f2,
+    secondary: #370aa1,
+    success: #50e392,
+    danger: #cd1f1c,
+    warning: #fecc01,
+    info: #5d89f1,
+    light: #eedafc,
+    dark: #181e28,
+);
+
+// typography for the application
+$font-family: "Roboto", sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// importing core bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
