@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import AppLogo from "../../../assets/AppLogo.png";
-
 import "./style.css";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg bg-white">
+      <div className="container py-2">
         <Link className="navbar-brand" to="/">
           <img src={AppLogo} alt="Cinephoria Logo" width="100" />
         </Link>

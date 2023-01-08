@@ -5,7 +5,7 @@ const Footer = () => {
   const yearRange = `${currentYear}-${nextYear.toString().substring(2)}`;
 
   return (
-    <footer className="p-3 fixed-bottom">
+    <footer className="p-3 bg-body-tertiary shadow-lg">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
           <div className="flex">

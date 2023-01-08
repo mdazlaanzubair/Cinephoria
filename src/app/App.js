@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <div className="container">
+        <div className="container py-5">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/movies" element={<Movies />} />

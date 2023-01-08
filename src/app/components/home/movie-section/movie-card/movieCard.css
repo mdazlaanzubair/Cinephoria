@@ -1,0 +1,17 @@
+.hover-overlay {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-overlay:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #6805f2 , #370aa1);
+  opacity: .8;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #6805f2;
+  font-weight: bolder;
+}
