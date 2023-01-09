@@ -2,12 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   movies: {
-    topRated: [],
     all: [],
-    trending: {
-      daily: {},
-      weekly: {},
-    },
+    topRated: [],
+    dailyTrend: [],
+    weeklyTrend: [],
   },
 };
 
@@ -15,12 +13,19 @@ const movieSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    setTrends: (state, payload) => {
-      state.movies.trending.daily = payload.daily;
-      state.movies.trending.weekly = payload.weekly;
+    setDailyTrends: (state, {payload}) => {
+      console.log(payload)
+      // state.movies.dailyTrend = payload;
+    },
+    setWeeklyTrends: (state, {payload}) => {
+      state.movies.weeklyTrend = payload;
+    },
+    setTopRated: (state, {payload}) => {
+      state.movies.topRated = payload;
     },
   },
 });
 
-export const { setTrends } = movieSlice.actions;
+export const { setDailyTrends, setWeeklyTrends, setTopRated } =
+  movieSlice.actions;
 export default movieSlice.reducer;

@@ -1,13 +1,21 @@
 import Hero from "../components/home/hero-section/Hero";
-import MovieSection from "../components/home/movie-section/MovieSection";
+import TopRated from "../components/home/movie-section/TopRated";
+import TrendingDaily from "../components/home/movie-section/TrendingDaily";
+import TrendingWeekly from "../components/home/movie-section/TrendingWeekly";
 
 const Home = () => {
   return (
     <>
+      {/* top section */}
       <Hero />
-      <MovieSection title="Trending Today" movies={[0,1,2,3,4,5,6,7,8,9]} />
-      <MovieSection title="Top Rated" movies={[0,1,2,3,4,5,6,7,8,9]} />
-      <MovieSection title="Picks of the Week" movies={[0,1,2,3,4,5,6,7,8,9]} />
+
+      {/* movies listing section */}
+      {/* trending movies of the day */}
+      <TrendingDaily />
+      {/* trending this week */}
+      <TrendingWeekly />
+      {/* top rated movies */}
+      <TopRated />
     </>
   );
 };
