@@ -5,18 +5,15 @@ const MovieCard = ({ movie }) => {
     <div className="card text-bg-dark border-0">
       <img
         className="card-img"
-        src={`https://picsum.photos/350/150?random=1`}
+        src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
         style={{ width: "auto", height: "40vh" }}
-        alt="Poster"
+        alt={"Poster" + movie.original_title}
       />
       <div className="card-img-overlay hover-overlay">
-        <h5 className="card-title">Card title</h5>
+        <h5 className="card-title">{movie.title}</h5>
+        <p className="card-text">{movie.overview}</p>
         <p className="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </p>
-        <p className="card-text">
-          <small>Last updated 3 mins ago</small>
+          <small>Released on {movie.release_date}</small>
         </p>
       </div>
     </div>
