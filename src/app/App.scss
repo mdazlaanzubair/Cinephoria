@@ -36,7 +36,12 @@ input[type="number"]:focus,
 }
 
 .swiper-button-next,
-.swiper-button-prev {
+.swiper-button-prev{
     color: #6805f2 !important;
+    font-weight: bolder !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #6805f2 !important;
     font-weight: bolder !important;
 }

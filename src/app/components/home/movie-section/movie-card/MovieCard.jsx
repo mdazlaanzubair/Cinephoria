@@ -11,7 +11,7 @@ const MovieCard = ({ movie }) => {
       />
       <div className="card-img-overlay hover-overlay">
         <h5 className="card-title">{movie.title}</h5>
-        <p className="card-text">{movie.overview}</p>
+        <p className="card-text">{movie.overview.slice(0, 100) + '...'}</p>
         <p className="card-text">
           <small>Released on {movie.release_date}</small>
         </p>
