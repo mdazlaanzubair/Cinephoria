@@ -13,15 +13,14 @@ const movieSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    setDailyTrends: (state, {payload}) => {
-      console.log(payload)
-      // state.movies.dailyTrend = payload;
+    setDailyTrends: (state, actions) => {
+      state.movies.dailyTrend = actions.payload;
     },
-    setWeeklyTrends: (state, {payload}) => {
-      state.movies.weeklyTrend = payload;
+    setWeeklyTrends: (state, actions) => {
+      state.movies.weeklyTrend = actions.payload;
     },
-    setTopRated: (state, {payload}) => {
-      state.movies.topRated = payload;
+    setTopRated: (state, actions) => {
+      state.movies.topRated = actions.payload;
     },
   },
 });

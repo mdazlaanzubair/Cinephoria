@@ -1,5 +1,5 @@
 import requests from "../../../constants/requests";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { setDailyTrends } from "../../../../redux/store-slices/movies";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,23 +10,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-const TrendingDaily = ({movies = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}) => {
+const TrendingDaily = () => {
   // initializing dispatch
   const dispatch = useDispatch();
 
-  // fetched movies holder
-  const [moviesHolder, setMoviesHolder] = useState([]);
+  // grabbing content from store to serve the component
+  const movies = useSelector((state) => state.movies.movies.dailyTrend);
 
   // fetching content from API based on the section slug
   const fetchMovies = async (url) => {
     const response = await axios.get(url);
-    console.log(response.data);
-    // storing fetched data in the state variable so that it can be easily passed
-    // as dispatch function parameter in useEffect hook below
-    setMoviesHolder(response.data.results);
-    return;
+
+    // dispatching "setTopRated" action to set fetched
+    // movies in state at redux store
+    dispatch(setDailyTrends(response.data.results));
   };
 
   useEffect(() => {
@@ -35,9 +34,6 @@ const TrendingDaily = ({movies = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}) => {
 
     // fetching movies from API and storing in variable
     fetchMovies(url);
-
-    // setting state in store while fetching
-    dispatch(setDailyTrends(moviesHolder));
   }, []);
 
   return (

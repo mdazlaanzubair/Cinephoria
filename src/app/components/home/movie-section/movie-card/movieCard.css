@@ -9,9 +9,3 @@
   opacity: .8;
   transition: all 0.3s ease-in-out;
 }
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #6805f2;
-  font-weight: bolder;
-}

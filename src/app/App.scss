@@ -34,3 +34,9 @@ input[type="number"]:focus,
 [contenteditable].form-control:focus {
     box-shadow: inset 0 -1px 0 #ddd;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #6805f2 !important;
+    font-weight: bolder !important;
+}
