@@ -45,3 +45,16 @@ input[type="number"]:focus,
     background-color: #6805f2 !important;
     font-weight: bolder !important;
 }
+
+.swiper-slide {
+    // margin: 5px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(104, 5, 242, 0.188), 0 6px 6px rgba(104, 5, 242, 0.231);
+    margin-bottom: 7vh;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.swiper-slide:hover {
+    transform: scale(.95);
+}

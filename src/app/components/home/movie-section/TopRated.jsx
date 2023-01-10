@@ -38,7 +38,7 @@ const TopRated = () => {
 
   return (
     <div className="col-md-12 mb-5">
-      <h1 className="fw-bold mb-4">Top Rated</h1>
+      <h1 className="fw-bold mb-4">All Time Favorite</h1>
 
       {/* movie listing */}
       <Swiper
