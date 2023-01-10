@@ -10,11 +10,9 @@ const MovieCard = ({ movie }) => {
         alt={"Poster" + movie.original_title}
       />
       <div className="card-img-overlay hover-overlay">
-        <h5 className="card-title">{movie.title}</h5>
-        <p className="card-text">{movie.overview.slice(0, 100) + '...'}</p>
-        <p className="card-text">
-          <small>Released on {movie.release_date}</small>
-        </p>
+        <div className="d-flex justify-content-center align-items center">
+          <h4 className="text-center card-title my-auto">{movie.title}</h4>
+        </div>
       </div>
     </div>
   );

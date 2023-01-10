@@ -9,3 +9,7 @@
   opacity: .8;
   transition: all 0.3s ease-in-out;
 }
+
+.hover-overlay > .d-flex {
+  height: 100%;
+}

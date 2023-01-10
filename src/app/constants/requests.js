@@ -97,6 +97,16 @@ const requests = {
 
   // discover top rated movies
   fetchToRatedMovies: `${urlConstants.baseUrl}movie/top_rated?${urlConstants.apiKey}&language=en-US`,
+
+  // get details of specific movie
+  // this request key has function as a value which takes movie id as parameter
+  // and returns movie details url
+  getMovieDetails: (movieId) =>
+    `${urlConstants.baseUrl}movie/${movieId}?${urlConstants.apiKey}&language=en-US`,
+
+  // similarly we have this "getMovieCredits" that returns movie credits url in the same way
+  getMovieCredits: (movieId) =>
+    `${urlConstants.baseUrl}movie/${movieId}/credits?${urlConstants.apiKey}&language=en-US`,
 };
 
 export default requests;

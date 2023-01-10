@@ -4,7 +4,7 @@ import "./style.css";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-white">
+    <nav className="navbar navbar-expand-lg">
       <div className="container py-2">
         <Link className="navbar-brand" to="/">
           <img src={AppLogo} alt="Cinephoria Logo" width="100" />
