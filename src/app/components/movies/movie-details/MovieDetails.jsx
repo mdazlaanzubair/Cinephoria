@@ -1,44 +1,144 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import requests from "../../../constants/requests";
 import * as constants from "./constants.js";
 
 const MovieDetails = () => {
-  const movieDetails = requests.getMovieDetails(550);
+  const movieDetailsUrl = requests.getMovieDetails(550);
+  const [movieData, setMovieData] = useState({});
+
   const movieCredits = requests.getMovieCredits(550);
 
-  const credits = constants.movieCredits;
-  const movieData = constants.movieDetails;
+  const fetchMoviesDetails = async (url) => {
+    const response = await axios.get(url);
+    setMovieData(response.data);
+  };
 
-  console.log(movieDetails);
+  useEffect(() => {
+    fetchMoviesDetails(movieDetailsUrl);
+  }, []);
+
+  const credits = constants.movieCredits;
+  // const movieData = constants.movieDetails;
+
   console.log(movieData);
   console.log("===================================");
   console.log(movieCredits);
   console.log(credits);
 
   return (
-    <div className="row justify-content-start shadow p-5 rounded mb-5">
+    <div
+      className="row justify-content-start p-5 rounded mb-5"
+      style={{
+        borderRadius: "15px",
+        backgroundColor:
+          "radial-gradient(circle at center, #05010e 40%, #05010e 40%, #05010e50 100%)",
+        backgroundImage: [
+          "radial-gradient(circle at center, #05010ef1 30%, #05010e 100%)",
+          `url(https://image.tmdb.org/t/p/original${movieData.backdrop_path})`,
+        ],
+        /* Center and scale the image nicely */
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        height: "100vh",
+        zIndex: "-1",
+      }}
+    >
       <div className="col-md-4 mb-3">
-        <img
-          className="img-fluid rounded hover-shadow"
-          src={`https://image.tmdb.org/t/p/original${movieData.poster_path}`}
-          alt={movieData.original_title}
-        />
+        <a href={movieData.homepage} target="_blank" rel="noreferrer">
+          <img
+            className="img-fluid rounded hover-shadow"
+            src={`https://image.tmdb.org/t/p/original${movieData.poster_path}`}
+            alt={movieData.original_title}
+          />
+        </a>
       </div>
-      <div className="col-md-8 mb-3">
-        <div
-          className="bg-img-container"
-          style={{
-            backgroundColor: "#ff00ff",
-            backgroundImage: `url(https://image.tmdb.org/t/p/original${movieData.backdrop_path})`,
-            backgroundSize: "cover",
-            filter: `blur(8px)`,
-            height: "100px",
-            zIndex: "1",
-          }}
-        ></div>
+      <div className="col-md-8 mb-3 text-light">
         <h1 className="display-4 fw-bold mb-0">{movieData.title}</h1>
         <h2 className="fw-light text-success">{movieData.tagline}</h2>
-        This is some content from a media component. You can replace this with
-        any content and adjust it as needed.
+        <p className="">{movieData.overview}</p>
+        <p>
+          {movieData.genres.map((genre, index) => (
+            <span className="badge bg-secondary me-2" key={index}>
+              {genre.name}
+            </span>
+          ))}
+        </p>
+        <hr />
+        <h3 className="fw-bold">
+          Cinematic Scoop: <span className="fw-light">Behind the Film</span>
+        </h3>
+        {movieData.status == "Released" ? (
+          <p className="mb-0">
+            Released on: <strong>{movieData.release_date}</strong>
+          </p>
+        ) : (
+          <p className="mb-0">
+            Status: <strong>{movieData.status}</strong>
+          </p>
+        )}
+        <p className="mb-3">
+          Language(s):{" "}
+          {movieData.spoken_languages.map((lang, index) => (
+            <span className="badge bg-warning text-dark me-2" key={index}>
+              {lang.name}
+            </span>
+          ))}
+        </p>
+        <p className="mb-0">
+          Budget:{" "}
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: 2,
+          }).format(movieData.budget)}
+        </p>
+        <p className="mb-0">
+          Revenue:{" "}
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: 2,
+          }).format(movieData.revenue)}
+        </p>
+        <p className="mb-0">
+          Popularity:
+          <span className="mx-2 text-warning">
+            <i className="fas fa-fire-alt mx-1"></i>{" "}
+            {movieData.popularity.toFixed(2)}
+          </span>
+          <span className="mx-2 text-info">
+            <i className="fas fa-poll mx-1"></i>{" "}
+            {movieData.vote_average.toFixed(2)}
+          </span>
+          <span className="mx-2 text-danger">
+            <i className="fas fa-thumbs-up mx-1"></i> {movieData.vote_count}
+          </span>
+        </p>
+        <p className="mb-3">
+          Runtime:{" "}
+          {`${Math.floor(movieData.runtime / 60)} hours and ${
+            movieData.runtime % 60
+          } minutes`}
+        </p>
+        <p className="mb-3">
+          Produced by:{" "}
+          {movieData.production_countries.map((country, index) => (
+            <span className="badge  bg-warning text-dark me-2" key={index}>
+              {country.name}
+            </span>
+          ))}
+        </p>
+        <p className="mb-0">
+          Production Houses:{" "}
+          {movieData.production_companies.map((company, index) => (
+            <span className="badge bg-success text-dark me-2" key={index}>
+              {company.name}
+            </span>
+          ))}
+        </p>
       </div>
     </div>
   );
