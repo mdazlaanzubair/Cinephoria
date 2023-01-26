@@ -7,7 +7,7 @@ input.form-control {
   border-radius: 0;
   width: 0;
   padding: 0;
-  transition: width 0.5s ease-in-out, padding 0.1s ease-in-out;
+  transition: all 0.5s ease-in-out, padding 0.1s ease-in-out;
 }
 
 .movie-search-form:hover > input.form-control,

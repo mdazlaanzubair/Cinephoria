@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./hero.css";
-import HeroImg from "../../../assets/hero-img.png"
+import HeroImg from "../../../assets/hero-img.png";
 
 const Hero = () => {
   return (
@@ -29,9 +29,6 @@ const Hero = () => {
             id="button-addon2"
           >
             <i className="fas fa-search"></i>
-            <span id="search-text" className="fw-bold ms-2">
-              Search
-            </span>
           </Link>
         </div>
       </div>
