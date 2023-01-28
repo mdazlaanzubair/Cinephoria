@@ -32,8 +32,6 @@ const MovieCast = ({ movieID, movieName }) => {
 
     // fetching data from url
     fetchCredits(movieCreditsUrl);
-    console.log(movieCreditsUrl);
-    console.log(movieCreditsData);
   }, [movieID]);
   return (
     <div className="container">
