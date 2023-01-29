@@ -76,7 +76,7 @@ const MovieCast = ({ movieID, movieName }) => {
                     key={index}
                   >
                     <div className="d-flex flex-row mx-3">
-                      <div class="flex-shrink-0">
+                      <div className="flex-shrink-0">
                         <img
                           className="img-fluid rounded border-0"
                           src={actor.gender === 1 ? femaleProfile : maleProfile}
@@ -120,7 +120,7 @@ const MovieCast = ({ movieID, movieName }) => {
                     key={index}
                   >
                     <div className="d-flex flex-row mx-3">
-                      <div class="flex-shrink-0">
+                      <div className="flex-shrink-0">
                         <img
                           className="img-fluid rounded border-0"
                           src={crew.gender === 1 ? femaleProfile : maleProfile}

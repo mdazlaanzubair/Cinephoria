@@ -50,8 +50,8 @@ const Header = () => {
                 I'm social
               </a>
             </li>
-            {social_links.map((link) => (
-              <li className="nav-item">
+            {social_links.map((link, index) => (
+              <li className="nav-item" key={index}>
                 <a
                   href={link.url}
                   target="_blank"
@@ -59,7 +59,7 @@ const Header = () => {
                   title={link.title}
                   alt={`Link to Muhammad Azlaan Zubair's ${link.title}`}
                 >
-                  <i class={link.icon}></i>
+                  <i className={link.icon}></i>
                 </a>
               </li>
             ))}

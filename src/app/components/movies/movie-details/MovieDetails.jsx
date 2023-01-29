@@ -65,7 +65,7 @@ const MovieDetails = () => {
                 }}
               >
                 Play Trailer
-                <i class="far fa-play-circle ms-2"></i>
+                <i className="far fa-play-circle ms-2"></i>
               </button>
             </div>
           </div>

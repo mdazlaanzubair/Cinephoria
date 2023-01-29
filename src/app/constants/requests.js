@@ -90,11 +90,6 @@ const requests = {
     weekly: `${urlConstants.baseUrl}trending/movie/week?${urlConstants.apiKey}&language=en-US`,
   },
 
-  // discover movies with genres
-  fetchMoviesWithGenre: movie_genres.map(({ name, id }) => ({
-    [name]: `${urlConstants.baseUrl}discover/movie?${urlConstants.apiKey}&with_genres=${id}`,
-  })),
-
   // discover top rated movies
   fetchToRatedMovies: `${urlConstants.baseUrl}movie/top_rated?${urlConstants.apiKey}&language=en-US`,
 
@@ -107,6 +102,11 @@ const requests = {
   // similarly we have this "getMovieCredits" that returns movie credits url in the same way
   getMovieCredits: (movieId) =>
     `${urlConstants.baseUrl}movie/${movieId}/credits?${urlConstants.apiKey}&language=en-US`,
+
+  // discover movies with genres
+  // similarly we have this "getMovieCredits" that returns movie credits url in the same way
+  getMovieGenre: (genreId) =>
+    `${urlConstants.baseUrl}discover/movie?${urlConstants.apiKey}&with_genres=${genreId}`,
 };
 
 export default requests;
