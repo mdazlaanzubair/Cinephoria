@@ -12,7 +12,7 @@ Cinephoria is a React.js project that provides detailed information about films.
 
 ## Application Preview
 
-![[Application Preview](./src//app//assets/application-preview.png)](https://cinephoria.netlify.app/)
+![Application Preview](./src//app//assets/application-preview.png)
 
 ### Prerequisites
 
