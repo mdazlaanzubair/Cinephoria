@@ -63,12 +63,6 @@ const Header = () => {
                 </a>
               </li>
             ))}
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/404">
-                Error Page
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
