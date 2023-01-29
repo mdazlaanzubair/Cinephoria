@@ -1,46 +1,34 @@
-# Getting Started with Create React App and Redux
+# Cinephoria
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+Cinephoria is a React.js project that provides detailed information about films. This project uses the [**TMDB API**](https://www.themoviedb.org/documentation/api) and [**Redux**](https://redux-toolkit.js.org/) to manage, display, and present data throughout the app. The goal of Cinephoria is to provide a user-friendly and easy-to-use platform for movie enthusiasts to discover and explore new and old films.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Detailed information about films
+- Easy-to-use interface
+- Built with [**React.js**](https://reactjs.org/), [**TMDB API**](https://www.themoviedb.org/documentation/api), and [**Redux**](https://redux-toolkit.js.org/)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [ ] Node.js installed on your machine
+- [ ] A TMDB API key (you can get one [here](https://kb.synology.com/en-vn/DSM/tutorial/How_to_apply_for_a_personal_API_key_to_get_video_info))
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] Clone the repository: `git clone https://github.com/<your-username>/cinephoria.git`
+- [ ] Navigate to the project directory: `cd cinephoria`
+- [ ] Install the dependencies: `npm install`
+- [ ] Create a copy of the `.example.env` file and name it `.env`.
+- [ ] Replace `<YOUR-API-KEY-HERE>` in `.env` with your `TMDB API` key.
+- [ ] Start the development server: npm start
+- [ ] Open [`http://localhost:3000`](http://localhost:3000) in your browser to view the app.
 
-### `npm run build`
+## Contributions/Suggestions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributions and suggestions are welcome. If you have any ideas or improvements, feel free to open a pull request or an issue.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License. See the LICENSE file for details.
