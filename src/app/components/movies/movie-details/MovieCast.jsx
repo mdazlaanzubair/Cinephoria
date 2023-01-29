@@ -70,25 +70,30 @@ const MovieCast = ({ movieID, movieName }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="card-header me-3 mb-3 border-0" key={index}>
-                  <div className="d-flex flex-row mx-3">
-                    <div class="flex-shrink-0">
-                      <img
-                        className="img-fluid rounded border-0"
-                        src={actor.gender === 1 ? femaleProfile : maleProfile}
-                        alt={actor.original_name}
-                        title={actor.character}
-                        width="60"
-                        height="60"
-                      />
-                    </div>
-                    <div className="flex-grow-1 ms-3">
-                      <h5 className="mb-0" title={actor.name}>
-                        {actor.name.length > 15
-                          ? shortenName(actor.name)
-                          : actor.name}
-                      </h5>
-                      <h6 className="text-primary">{actor.character}</h6>
+                <div className="card border-0">
+                  <div
+                    className="card-header me-3 mb-3 border-0 hover-shadow rounded p-3"
+                    key={index}
+                  >
+                    <div className="d-flex flex-row mx-3">
+                      <div class="flex-shrink-0">
+                        <img
+                          className="img-fluid rounded border-0"
+                          src={actor.gender === 1 ? femaleProfile : maleProfile}
+                          alt={actor.original_name}
+                          title={actor.character}
+                          width="60"
+                          height="60"
+                        />
+                      </div>
+                      <div className="flex-grow-1 ms-3">
+                        <h5 className="mb-0" title={actor.name}>
+                          {actor.name.length > 15
+                            ? shortenName(actor.name)
+                            : actor.name}
+                        </h5>
+                        <h6 className="text-primary">{actor.character}</h6>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -109,8 +114,11 @@ const MovieCast = ({ movieID, movieName }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="card me-3 mb-3 border-0" key={index}>
-                  <div className="card-header border-0">
+                <div className="card border-0">
+                  <div
+                    className="card-header me-3 mb-3 border-0 hover-shadow rounded p-3"
+                    key={index}
+                  >
                     <div className="d-flex flex-row mx-3">
                       <div class="flex-shrink-0">
                         <img
