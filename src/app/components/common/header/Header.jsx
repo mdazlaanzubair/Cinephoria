@@ -3,6 +3,29 @@ import AppLogo from "../../../assets/AppLogo.png";
 import "./style.css";
 
 const Header = () => {
+  const social_links = [
+    {
+      icon: "fab fa-facebook",
+      title: "Facebook",
+      url: "https://www.facebook.com/mdazlaanzubair/",
+    },
+    {
+      icon: "fab fa-instagram",
+      title: "Instagram",
+      url: "https://www.instagram.com/mdazlaanzubair/",
+    },
+    {
+      icon: "fab fa-twitter",
+      title: "Twitter",
+      url: "https://twitter.com/mdazlaanzubair",
+    },
+    {
+      icon: "fab fa-linkedin",
+      title: "Linkedin",
+      url: "https://www.linkedin.com/in/mdazlaanzubair/",
+    },
+  ];
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container py-2">
@@ -23,15 +46,24 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/movies">
-                Movies
-              </Link>
+              <a href="#" className="nav-link disabled">
+                I'm social
+              </a>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/movies/1">
-                Single Movie
-              </Link>
-            </li>
+            {social_links.map((link) => (
+              <li className="nav-item">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  className="nav-link"
+                  title={link.title}
+                  alt={`Link to Muhammad Azlaan Zubair's ${link.title}`}
+                >
+                  <i class={link.icon}></i>
+                </a>
+              </li>
+            ))}
+
             <li className="nav-item">
               <Link className="nav-link" to="/404">
                 Error Page

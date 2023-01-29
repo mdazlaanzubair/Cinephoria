@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import axios from "axios";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const TopRated = () => {
   // initializing dispatch
@@ -38,7 +39,19 @@ const TopRated = () => {
 
   return (
     <div className="col-md-12 mb-5">
-      <h1 className="fw-bold mb-4">All Time Favorite</h1>
+      <div className="d-flex justify-content-between align-items-center">
+        <div className="flex-grow-1">
+          <h1 className="fw-bold mb-4">All Time Favorite</h1>
+        </div>
+        <div className="flex-shrink-0">
+          <Link
+            className="btn btn-sm btn-outline-secondary border-0"
+            to="/movies"
+          >
+            Show more
+          </Link>
+        </div>
+      </div>
 
       {/* movie listing */}
       <Swiper

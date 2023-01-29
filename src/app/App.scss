@@ -54,9 +54,18 @@ button:active {
 .swiper-pagination-bullet {
     background-color: #9752f881 !important;
     font-weight: normal !important;
+    transition: all .2s ease-in-out;
+}
+
+.swiper-pagination-bullet:hover {
+    width: 1vw !important;
+    border-radius: 15px !important;
+    font-weight: bolder !important;
 }
 
 .swiper-pagination-bullet-active {
+    width: 2vw !important;
+    border-radius: 15px !important;
     background-color: #6805f2 !important;
     font-weight: bolder !important;
 }
