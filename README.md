@@ -8,11 +8,11 @@ Cinephoria is a React.js project that provides detailed information about films.
 - Easy-to-use interface
 - Built with [**React.js**](https://reactjs.org/), [**TMDB API**](https://www.themoviedb.org/documentation/api), and [**Redux**](https://redux-toolkit.js.org/)
 
-## Getting Started
-
 ## Application Preview
 
 ![Application Preview](./src//app//assets/application-preview.png)
+
+## Getting Started
 
 ### Prerequisites
 
