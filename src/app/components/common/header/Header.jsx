@@ -46,9 +46,9 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a href="#" className="nav-link disabled">
+              <Link to="/" className="nav-link disabled">
                 I'm social
-              </a>
+              </Link>
             </li>
             {social_links.map((link, index) => (
               <li className="nav-item" key={index}>
@@ -58,6 +58,7 @@ const Header = () => {
                   className="nav-link"
                   title={link.title}
                   alt={`Link to Muhammad Azlaan Zubair's ${link.title}`}
+                  rel="noreferrer"
                 >
                   <i className={link.icon}></i>
                 </a>
