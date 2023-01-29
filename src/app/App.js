@@ -7,7 +7,6 @@ import "./App.scss";
 import Header from "./components/common/header/Header";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
-import Page404 from "./pages/Page404";
 import Footer from "./components/common/footer/Footer";
 import MovieDetails from "./components/movies/movie-details/MovieDetails";
 
@@ -21,7 +20,6 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/movies" element={<Movies />} />
             <Route exact path="/movies/:movieID" element={<MovieDetails />} />
-            <Route exact path="/404" element={<Page404 />} />
           </Routes>
         </div>
         <Footer />
