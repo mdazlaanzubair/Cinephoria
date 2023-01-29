@@ -20,7 +20,7 @@ Cinephoria is a React.js project that provides detailed information about films.
 - [ ] Clone the repository: `git clone https://github.com/<your-username>/cinephoria.git`
 - [ ] Navigate to the project directory: `cd cinephoria`
 - [ ] Install the dependencies: `npm install`
-- [ ] Create a copy of the `.example.env` file and name it `.env`.
+- [ ] Create a copy of the `.env.example` file and name it `.env`.
 - [ ] Replace `<YOUR-API-KEY-HERE>` in `.env` with your `TMDB API` key.
 - [ ] Start the development server: npm start
 - [ ] Open [`http://localhost:3000`](http://localhost:3000) in your browser to view the app.
