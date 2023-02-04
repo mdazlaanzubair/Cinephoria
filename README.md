@@ -21,7 +21,7 @@ Cinephoria is a React.js project that provides detailed information about films.
 
 ### Installation
 
-- [ ] Clone the repository: `git clone https://github.com/<your-username>/cinephoria.git`
+- [ ] Clone the repository: `git clone https://github.com/mdazlaanzubair/Cinephoria.git`
 - [ ] Navigate to the project directory: `cd cinephoria`
 - [ ] Install the dependencies: `npm install`
 - [ ] Create a copy of the `.env.example` file and name it `.env`.
